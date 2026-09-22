@@ -11,5 +11,34 @@ package com.mycompany.pruebadevops;
 public class Tarea {
     private String descripción;
     private boolean completada;
-    
+
+    public String getDescripción() {
+        return descripción;
+    }
+
+    public boolean isCompletada() {
+        return completada;
+    }
+
+    public void setDescripción(String descripción) {
+        this.descripción = descripción;
+    }
+
+    public void setCompletada() {
+        this.completada = true;
+    }
+
+    @Override
+    public String toString() {
+        String resultado;
+        if (completada) {
+            resultado="Tarea: " + descripción + " Completa.";
+        } else{
+            resultado="Tarea: " + descripción + " No completa.";
+        }
+        
+        return resultado;
+    }
+
+   
 }

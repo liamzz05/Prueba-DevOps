@@ -18,4 +18,13 @@ public class GestorTareas {
         this.tareas = new ArrayList<>();
     }
 
+    public boolean generarTarea(Tarea e){
+        return tareas.add(e);
+    }
+    
+    public void marcarCompletada(Tarea e){
+        e.setCompletada();
+    }
+    
+    
 }

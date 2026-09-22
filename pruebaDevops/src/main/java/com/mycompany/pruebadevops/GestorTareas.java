@@ -18,25 +18,36 @@ public class GestorTareas {
         this.tareas = new ArrayList<>();
     }
 
-    public boolean generarTarea(Tarea e){
+    public boolean generarTarea(Tarea e) {
         return tareas.add(e);
     }
-    
-    public void marcarCompletada(Tarea e){
+
+    public void marcarCompletada(Tarea e) { //no funciona.
         e.setCompletada();
+        tareas.set(tareas.indexOf(e), e);
     }
-    
-    public void listarTareas(){
-        for(Tarea t:tareas){
+
+    public void listarTareas() {
+        for (Tarea t : tareas) {
             System.out.println(t.toString());
         }
     }
-    
-    public void eliminarCompletas(){
-        for(Tarea t:tareas){
+
+    public void eliminarCompletas() {
+        for (Tarea t : tareas) {
             if (t.isCompletada()) {
                 tareas.remove(t);
             }
         }
+    }
+
+    public boolean existe(Tarea e) {
+        boolean existe = false;
+        for (Tarea t : tareas) {
+            if (t.getDescripción().equals(e.getDescripción())) {
+                existe = true;
+            }
+        }
+        return existe;
     }
 }

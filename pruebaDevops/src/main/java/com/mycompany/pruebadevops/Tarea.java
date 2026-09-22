@@ -12,6 +12,11 @@ public class Tarea {
     private String descripción;
     private boolean completada;
 
+    public Tarea(String descripción) {
+        this.descripción = descripción;
+        this.completada = false;
+    }
+
     public String getDescripción() {
         return descripción;
     }

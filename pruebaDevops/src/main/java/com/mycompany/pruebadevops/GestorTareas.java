@@ -26,5 +26,17 @@ public class GestorTareas {
         e.setCompletada();
     }
     
+    public void listarTareas(){
+        for(Tarea t:tareas){
+            System.out.println(t.toString());
+        }
+    }
     
+    public void eliminarCompletas(){
+        for(Tarea t:tareas){
+            if (t.isCompletada()) {
+                tareas.remove(t);
+            }
+        }
+    }
 }

@@ -1,0 +1,21 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.pruebadevops;
+
+import java.util.ArrayList;
+
+/**
+ *
+ * @author daw2
+ */
+public class GestorTareas {
+
+    private ArrayList<Tarea> tareas;
+
+    public GestorTareas() {
+        this.tareas = new ArrayList<>();
+    }
+
+}

@@ -23,8 +23,12 @@ public class GestorTareas {
     }
 
     public void marcarCompletada(Tarea e) { //no funciona.
-        e.setCompletada();
-        tareas.set(tareas.indexOf(e), e);
+        for(Tarea t : tareas){
+            if (t.equals(e)) {
+                t.setCompletada();
+                tareas.set(tareas.indexOf(e), t); // ¿??
+            }
+        }
     }
 
     public void listarTareas() {
